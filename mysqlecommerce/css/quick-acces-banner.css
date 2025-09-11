@@ -1,0 +1,14 @@
+.quick-acces-banner {
+  margin-right: 20px;
+  border: medium;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.quick-acces-banner img {
+  margin-top: 20px;
+  width: 386.67px;
+  height: 56.983px;
+}

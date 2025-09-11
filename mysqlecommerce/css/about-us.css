@@ -1,0 +1,104 @@
+/* ==== About Us Page Styling ==== */
+.about-hero {
+    position: relative;
+    background: linear-gradient(to right, rgba(37,99,235,0.85), rgba(79,70,229,0.85));
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+.about-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    animation: fadeInDown 1s ease-out;
+}
+.about-hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1.2s ease-out;
+    color: #fff;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==== Section Wrapper ==== */
+.about-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 30px;
+}
+
+/* ==== Card Styles ==== */
+.about-card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+.about-card h2 {
+    font-size: 1.6rem;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+.about-card p, .about-card ul {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ==== Values List ==== */
+.values-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+.values-list li {
+    background: #f9fafb;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.values-list li:hover {
+    background: #eef2ff;
+    transform: translateY(-2px);
+}
+.values-list strong {
+    color: #111827;
+}
+.values-list svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #2563eb;
+}
+
+/* ==== Contact Info ==== */
+.contact-info a {
+    color: #2563eb;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}

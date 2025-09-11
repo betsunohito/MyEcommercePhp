@@ -1,0 +1,523 @@
+body {
+  background-color: #fefefe !important;
+}
+
+.topnav {
+  background-color: #e9e9e9;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  text-align: center;
+}
+
+.topnav a {
+  border-bottom: 1px solid #00000000;
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+  display: block;
+  text-align: center;
+}
+
+.topnav a:hover {
+  border-bottom-color: red;
+  color: red;
+}
+
+.topnav ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: visible;
+}
+
+.topnav ul li a img {
+  width: 146px;
+  height: 100%;
+  margin-bottom: -8px;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit
+}
+
+button,
+input {
+  overflow: visible
+}
+
+img {
+  vertical-align: middle;
+  border-style: none
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle
+}
+
+.topright-align {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  position: relative;
+  top: 10px;
+  right: 20px;
+  width: auto;
+  max-width: 1200px;
+  text-align: right;
+}
+
+.topright {
+  display: inline-block;
+  font-size: 12px !important;
+  color: #999 !important;
+  text-align: center;
+  text-decoration: none;
+  line-height: 15px;
+  margin-left: 30px;
+}
+
+
+
+
+.select-navigation {
+  border-bottom: 2px solid black;
+
+}
+
+/*responsive*/
+.menubutton {
+  visibility: hidden;
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: white;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start !important;
+  visibility: hidden;
+
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+  font-size: 20px;
+}
+
+@media (max-width:1000px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menubutton {
+    visibility: visible;
+    display: inline-block;
+  }
+
+  .topright-align {
+    display: none;
+  }
+
+  .quick-acces-banner {
+    visibility: hidden;
+    display: none !important;
+  }
+
+  .sidebar {
+    width: 100%;
+    font-size: 100%;
+  }
+
+  .centerstory {
+    display: none;
+  }
+
+}
+
+/* Style for the link */
+.account-item {
+  position: relative;
+  z-index: 999;
+}
+
+.hover-content {
+  display: none;
+  background-color: #e9e9e9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Make sure the content has enough padding and size */
+.hover-content p,
+.hover-content ul {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 14px;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Style the list inside hover content */
+.hover-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hover-content ul li {
+  padding: 8px 0;
+}
+
+.hover-content ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+.hover-content ul li a:hover {
+  color: red;
+}
+
+/* Show hover content when hovering over the li */
+.account-item:hover .hover-content {
+  display: block;
+}
+
+.topnav ul li:hover .hover-content {
+  display: block;
+  position: absolute;
+  top: 100%;
+}
+
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  z-index: 9999;
+  /* Ensure it stays on top of other content */
+}
+
+.loading-message {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.cart-link {
+  list-style: none;
+  position: relative;
+  display: inline-block;
+}
+
+.cart-link a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  padding: 8px 12px;
+  display: inline-block;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.cart-link a:hover {
+  background-color: #ddd;
+}
+
+.cart-count {
+  background-color: #d32f2f;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  position: absolute;
+  top: -6px;
+  right: 2px;
+  min-width: 18px;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+
+@media (max-width: 500px) {
+  .topnav input[type="text"] {
+    width: 200px;
+  }
+}
+
+.topnav .search-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
+  margin-right: 25px;
+}
+
+.topnav input[type="text"] {
+  padding: 10px 15px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.topnav input[type="text"]:focus {
+  border-color: #ccc;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
+}
+
+.topnav .search-container button {
+  background: #f0f0f0;
+  position: absolute;
+  color: #333;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: -20px;
+  transition: background-color 0.3s;
+  z-index: 2;
+}
+
+.topnav .search-container button:hover {
+  background-color: #e0e0e0;
+}
+
+.searchResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 250px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  z-index: 1000;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.result-item {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f2f2f2;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item:hover {
+  background-color: #f9f9f9;
+}
+
+/* =========================
+   Modern Nav — Single Centered Flyout (No HTML change per item)
+   Expecting structure:
+   <nav class="select-navigation">
+     <ul class="topnav"> ... <li><a>...</a></li> ... </ul>
+     <div class="flyout">
+       <div class="panel panel-1">...</div>
+       <div class="panel panel-2">...</div>
+       ...
+     </div>
+   </nav>
+   ========================= */
+.select-navigation {
+  --nav-bg: #fff;
+  --nav-fg: #111827;
+  --nav-muted: #6b7280;
+  --nav-accent: #3b82f6;
+  --nav-border: rgba(0,0,0,.08);
+  --nav-shadow: 0 12px 30px rgba(0,0,0,.14);
+  --radius: 12px;
+  --fade: 180ms;
+  position: relative;
+  z-index: 99;
+}
+
+/* Top-level nav (tabs) */
+.select-navigation > ul:last-of-type {
+  overflow: visible !important;
+  position: relative;
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+  background-color: #e9e9e9;
+  z-index: 2;
+  
+}
+
+/* Make li shrink to its <a>, not stretch */
+.select-navigation > ul:last-of-type > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.select-navigation > ul:last-of-type > li > a {
+  text-decoration: none;
+  color: var(--nav-fg);
+  padding: 8px 12px;                 /* tighter tab */
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color var(--fade), color var(--fade);
+  white-space: nowrap;
+}
+
+.select-navigation > ul:last-of-type > li:hover > a,
+.select-navigation > ul:last-of-type > li:focus-within > a {
+  background: #f3f4f6;
+}
+.hover-item{
+  z-index: 2;
+}
+/* =========================
+   ONE SHARED FLYOUT
+   ========================= */
+.select-navigation .flyout {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 8px);
+  transform: translateX(-50%) translateY(6px);
+  transform-origin: top center;
+
+  /* fixed size (shrinks if viewport smaller) */
+  width: 1200px;
+  height: 800px;
+  max-width: 96vw;
+  max-height: 85vh;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity var(--fade), transform var(--fade), visibility var(--fade);
+  z-index: 9999;
+
+  background: var(--nav-bg);
+  border: 1px solid var(--nav-border);
+  border-radius: var(--radius);
+  box-shadow: var(--nav-shadow);
+  overflow: hidden;
+  padding: 12px;
+
+   display: flex;
+  justify-content: flex-start; /* ⬅ stick to left */
+  align-items: flex-start;
+}
+
+/* Hover bridge (optional, helps prevent flicker when moving from tab → flyout) */
+.select-navigation .flyout::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+
+/* ✅ Open only when JS toggles .open on the container */
+.select-navigation.open .flyout {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* =========================
+   Flyout content layout
+   ========================= */
+.select-navigation .flyout ul {
+  display: flex;
+  flex-direction: column;  /* stack top → bottom */
+  align-items: flex-start; /* stick to left edge */
+  justify-content: flex-start; /* stick to top */
+  gap: 8px;                /* spacing between items */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: auto;             /* shrink to content width */
+  height: 100%;            /* fill flyout height */
+  margin: 15px;
+}
+
+
+.select-navigation .flyout li {
+  width: 100%;   /* if you want full width row */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.select-navigation .flyout li > a {
+  display: inline-block; /* shrink to text */
+  padding: 4px 8px;      /* tighter links */
+  font-size: 15px;
+  color: #374151;
+  text-decoration: none;
+  border-radius: 6px;
+  line-height: 1.3;
+  transition: background-color var(--fade), padding-left var(--fade);
+}
+
+.select-navigation .flyout li > a:hover,
+.select-navigation .flyout li > a:focus-visible {
+  background: #eef2ff;
+  color: #1f2937;
+  padding-left: 12px;
+  outline: none;
+}
+
+/* Accessibility focus ring */
+.select-navigation a:focus-visible {
+  outline: 2px solid var(--nav-accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
