@@ -1,0 +1,109 @@
+/* ===== Toasts (top-right stack) ===== */
+
+/* Ensure predictable sizing */
+#status-container, #status-container * { box-sizing: border-box; }
+
+/* Fixed container */
+.status-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2147483647;  /* super on top */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 320px;
+  pointer-events: none; /* clicks pass through the gap area */
+}
+
+/* Individual toast */
+.toast {
+  /* layout & aesthetics */
+  background-color: #e8f5e9;        /* success default */
+  color: #2e7d32;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  border-left: 5px solid #66bb6a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+
+  /* behavior */
+  pointer-events: auto;             /* clickable to dismiss if you add that */
+  opacity: 0;                       /* start hidden to prevent flash */
+  transform: translateY(-10px);
+  animation: fadeInOut 3s ease forwards;
+  will-change: opacity, transform;
+  contain: layout paint;            /* helps stacking performance */
+}
+
+/* Error variant */
+.toast.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border-left-color: #ef5350;
+}
+
+/* Fade in/out animation (3s = matches JS auto-remove) */
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translateY(-10px); }
+  10%  { opacity: 1; transform: translateY(0); }
+  90%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* ===== Optional: badge-style notifications (your second system) ===== */
+.status-badge {
+  position: relative;
+  overflow: hidden;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateX(30px);
+  animation: slide-in 0.3s forwards;
+  pointer-events: none;             /* keep as display-only */
+  backdrop-filter: blur(4px);
+}
+
+.status-success { background-color: #28a745; }
+.status-error   { background-color: #dc3545; }
+
+.status-progress {
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 4px; width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: progress-bar 3s linear forwards;
+  border-radius: 0 0 6px 6px;
+}
+
+@keyframes slide-in {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-out {
+  to { opacity: 0; transform: translateX(30px); }
+}
+
+@keyframes progress-bar {
+  from { width: 100%; }
+  to   { width: 0%; }
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .status-container {
+    right: 10px;
+    top: 10px;
+    max-width: 90%;
+  }
+  .status-badge {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+}
+

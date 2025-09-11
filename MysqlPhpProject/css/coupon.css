@@ -1,0 +1,179 @@
+/* coupon-form.css */
+.coupon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.coupon-card {
+  width: 100%;
+  max-width: 480px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 20px 24px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.coupon-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.coupon-group {
+  margin-bottom: 16px;
+}
+
+.coupon-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.coupon-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.coupon-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.coupon-submit {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.coupon-submit:hover {
+  background-color: #218838;
+}
+/* Remove number input arrows in Chrome, Safari, Edge */
+.coupon-input[type="number"]::-webkit-outer-spin-button,
+.coupon-input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove number input arrows in Firefox */
+.coupon-input[type="number"] {
+  -moz-appearance: textfield;
+}
+.coupon-list-section {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 2px solid #eee;
+  background-color: #fafafa;
+}
+
+.coupon-list-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.coupon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.coupon-card-list {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 280px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.coupon-card-list:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.coupon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.coupon-code {
+  font-weight: 600;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.coupon-amount {
+  background-color: #28a745;
+  color: white;
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.coupon-details p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+/* Autocomplete container */
+.suggestions {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 9999;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Show suggestions when class 'show' is added */
+.suggestions.show {
+  display: block;
+}
+
+/* Individual suggestion item */
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Last item border fix */
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+/* Highlighted item for keyboard nav */
+.suggestion-item.highlighted,
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+.autocomplete-wrapper {
+  position: relative;
+}

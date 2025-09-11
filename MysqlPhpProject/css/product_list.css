@@ -1,0 +1,308 @@
+.tdoftable {
+  height: 75px;
+  position: relative;
+}
+
+.imagoftable {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.table td img {
+  width: 75px;
+  height: 65px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0%;
+}
+
+.progress {
+  height: 16px;
+}
+
+.text-center {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.discount-cell {
+  position: relative;
+}
+
+.discount-input {
+  width: 100px;
+  padding: 4px;
+  font-size: 14px;
+  -moz-appearance: textfield;
+}
+
+.discount-input::-webkit-outer-spin-button,
+.discount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.apply-discount-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 120px;
+  display: none;
+  padding: 7px 16px;
+  font-size: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.apply-discount-btn:hover {
+  background-color: #218838;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.table td input[type="number"],
+.table td input[type="text"] {
+  width: 90px;
+  padding: 4px 6px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.table td select {
+  width: 110px;
+  padding: 4px 6px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.editable-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell input {
+  width: 100px;
+}
+
+.apply-btn {
+  position: absolute;
+  top: 50%;
+  left: 110px;
+  transform: translateY(-50%);
+  padding: 4px 10px;
+  font-size: 13px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+  z-index: 5;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3;
+}
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell input {
+  width: 90px;
+  padding: 4px 6px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.apply-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  padding: 5px 10px;
+  font-size: 13px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.2s ease;
+}
+
+.price-cell .apply-btn {
+  left: 105px;
+}
+.quantity-cell .apply-btn {
+  left: 105px;
+}
+.discount-cell .apply-btn {
+  left: 105px;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3;
+}
+/* Yellow glow when editing */
+.input-editing {
+  border: 2px solid #ffc107 !important;
+  box-shadow: 0 0 5px rgba(255, 193, 7, 0.7);
+}
+
+/* Green border after successful update */
+.input-success {
+  border: 2px solid #28a745 !important;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.6);
+}
+
+.product-name-cell {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* On larger screens, show full text */
+@media (min-width: 1440px) {
+  .product-name-cell {
+    max-width: none;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+}
+.toast-notification {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  min-width: 220px;
+  max-width: 360px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #28a745; /* default: green for success */
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 9999;
+  pointer-events: none;
+  transform: translateY(-20px); /* initial offset */
+}
+
+/* When visible */
+.toast-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Error state */
+.toast-notification.error {
+  background-color: #dc3545;
+}
+
+/* Optional success state (if toggled via class) */
+.toast-notification.success {
+  background-color: #28a745;
+}
+
+/* ///////////////////////////////////////////////////////////// */
+.pagination-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:16px;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.pag-nav .pagination{
+  list-style:none;
+  display:flex;
+  gap:6px;
+  padding:0;
+  margin:0;
+}
+
+.page-item{
+  display:inline-flex;
+}
+
+.page-item.disabled .page-link{
+  pointer-events:none;
+  opacity:.5;
+}
+
+.page-item.active .page-link{
+  background:#0d6efd;
+  color:#fff;
+  border-color:#0d6efd;
+}
+
+.page-item.ellipsis{
+  display:flex;
+  align-items:center;
+  padding:0 .25rem;
+  color:#6c757d;
+}
+
+.page-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:36px;
+  height:36px;
+  padding:0 .5rem;
+  border:1px solid #dee2e6;
+  border-radius:6px;
+  color:#0d6efd;
+  text-decoration:none;
+  background:#fff;
+  transition:background .15s, border-color .15s, color .15s;
+}
+
+.page-link:hover{
+  background:#f8f9fa;
+  border-color:#cfd4da;
+}
+
+.pagination-meta{
+  color:#6c757d;
+  font-size:.9rem;
+}

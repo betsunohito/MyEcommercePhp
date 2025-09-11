@@ -1,0 +1,212 @@
+.shipment-list-page {
+  width: 100%;
+  max-width: 100%; /* Optional: ensures it uses entire screen */
+  padding: 40px 20px; /* Add vertical spacing and a bit of horizontal breathing room */
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.shipment-list-page h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Make it a vertical list instead of grid */
+.shipment-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Each shipment row */
+.shipment-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-left: 4px solid #007bff33;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: background 0.2s ease;
+}
+
+.shipment-card:hover {
+  background-color: #f9f9f9;
+}
+
+/* Head info: order ID and date */
+.shipment-card h4 {
+  font-size: 17px;
+  color: #1c1c1c;
+  margin-bottom: 4px;
+}
+
+/* Simple info */
+.shipment-card p {
+  font-size: 14px;
+  color: #444;
+  margin: 2px 0;
+}
+
+/* Inline product view */
+.product-inline {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+}
+
+.product-thumb {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.product-thumb.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 12px;
+  background-color: #eee;
+}
+
+.product-name {
+  font-weight: 600;
+  color: #2c2c2c;
+  font-size: 15px;
+}
+
+/* Type (e.g. Size) */
+.type-label {
+  color: #d63031;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Quantity styles */
+.quantity-subtle {
+  font-size: 13px;
+  color: #777;
+  opacity: 0.6;
+}
+
+.quantity-visible {
+  font-weight: 600;
+  color: #111;
+  font-size: 14px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pagination a,
+.pagination span {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #eee;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.pagination a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.pagination span {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+.simulate-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+
+.simulate-btn:hover {
+  background-color: #e67e22;
+}
+.toast-notification {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  z-index: 9999;
+  display: none;
+  font-weight: bold;
+}
+
+.toast-notification.error {
+  background: #dc3545;
+}
+.back-btn {
+  margin-bottom: 15px;
+}
+
+.back-btn a {
+  color: #007bff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-btn a:hover {
+  color: #0056b3;
+}
+
+.hover-popup {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background-color: rgba(30, 30, 30, 0.95); /* Dark background with soft opacity */
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* This class will show the popup */
+.hover-popup.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

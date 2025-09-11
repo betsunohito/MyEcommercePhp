@@ -1,0 +1,329 @@
+/* -----------------------------
+   Wrapper & Input Styling
+------------------------------ */
+.autocomplete-wrapper {
+  position: relative;       /* for absolutely positioned suggestions */
+  width: 100%;
+  max-width: 300px;         /* max width of input */
+  margin-top: 8px;
+}
+
+.autocomplete-input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1em;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline-offset: 2px;
+  transition: border-color 0.3s ease;
+}
+
+.autocomplete-input:focus {
+  border-color: #007bff;   /* Bootstrap blue */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* -----------------------------
+   Suggestions Dropdown Styling
+------------------------------ */
+.suggestions {
+  position: absolute;
+  top: 100%;               /* immediately below input */
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;        /* avoid double border */
+  border-radius: 0 0 4px 4px;
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;           /* hidden by default */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Show suggestions container when active (you can toggle via JS) */
+.suggestions.show {
+  display: block;
+}
+
+.suggestions div {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background-color 0.2s ease;
+}
+
+.suggestions div:hover,
+.suggestions div:focus {
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+/* Optional: limit width on suggestions (override if needed) */
+.category1-suggestions,
+.category2-suggestions,
+.category3-suggestions {
+  min-width: 200px; /* minimum width */
+  max-width: 100%;  /* max width matches input */
+}
+.suggestions div.highlighted {
+  background-color: #e0f0ff;
+}
+.suggestion-item.highlighted {
+  background-color: #f0f0f0;
+}
+
+.product-search-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.product-search-box {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  transition: background 0.2s ease;
+}
+
+.product-item:hover {
+  background-color: #f1f1f1;
+}
+
+.product-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 16px;
+}
+
+.product-info h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.product-info p {
+  margin: 4px 0 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.product-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.product-type,
+.product-qty {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 90px;
+}
+
+.product-qty {
+  width: 70px;
+}
+
+.add-product-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-product-btn:hover {
+  background-color: #0056b3;
+}
+.product-price {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 80px;
+}
+.product-list {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.product-list.fade-out {
+  opacity: 0;
+  pointer-events: none; /* optional: disable interaction during fade */
+}
+.product-item.skeleton {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background-color: #fff;
+}
+
+.image-placeholder {
+  width: 100px;
+  height: 100px;
+  background: #eee;
+  border-radius: 6px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-placeholder {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-placeholder,
+.text-placeholder,
+.controls-placeholder {
+  height: 16px;
+  background: #eee;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Different widths for placeholders */
+.title-placeholder {
+  width: 50%;
+  height: 20px;
+}
+
+.text-placeholder {
+  width: 30%;
+}
+
+.controls-placeholder {
+  width: 80%;
+  height: 30px;
+  margin-top: 8px;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: -450px 0;
+  }
+  100% {
+    background-position: 450px 0;
+  }
+}
+
+.product-item.skeleton > div,
+.title-placeholder,
+.text-placeholder,
+.controls-placeholder {
+  background: linear-gradient(
+    to right,
+    #eeeeee 0%,
+    #dddddd 20%,
+    #eeeeee 40%,
+    #eeeeee 100%
+  );
+  background-size: 800px 104px;
+  animation: shimmer 1.2s linear infinite forwards;
+}
+.product-list {
+  min-height: 400px; /* adjust to roughly fit 3-4 product items */
+  transition: min-height 0.3s ease;
+}
+
+/* Make skeleton and product items same height */
+.product-item.skeleton,
+.product-item {
+  min-height: 130px; /* or exact height of your product item */
+  box-sizing: border-box;
+}
+
+
+/* Container in the top‑right corner */
+#notification-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+/* Base notification */
+.notification {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateX(120%) scale(0.8);
+  opacity: 0;
+  animation: slideIn 0.2s ease-out forwards, slideOut 0.2s ease-in forwards 2.6s;
+}
+
+/* Progress bar at bottom */
+.notification .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: rgba(255,255,255,0.8);
+  animation: shrink 2.8s linear forwards;
+}
+
+/* Variants */
+.notification-success { background: #2f855a; }
+.notification-error   { background: #c53030; }
+
+/* Keyframes */
+@keyframes slideIn {
+  to { transform: translateX(0) scale(1); opacity: 1; }
+}
+@keyframes shrink {
+  from { width: 100%; }
+  to   { width: 0%; }
+}
+@keyframes slideOut {
+  to { transform: translateX(120%) scale(0.8); opacity: 0; }
+}

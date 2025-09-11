@@ -1,0 +1,175 @@
+.image-upload-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.upload-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.file-upload-button {
+  padding: 8px 16px;
+  background-color: #0d6efd;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.file-upload-button:hover {
+  background-color: #0b5ed7;
+}
+
+.file-upload-text {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.upload-preview {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-top: 5px;
+}
+
+.upload-preview img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-group-center {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+select.form-control-custom {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+  width: 100%;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23666' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 12px 8px;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+select.form-control-custom:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+select.form-control-custom:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+}
+
+
+.preview-wrapper {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.preview-thumb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.preview-label {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #555;
+  max-width: 100px;
+  word-break: break-word;
+}
+
+.preview-popup-global {
+  position: fixed;
+  z-index: 9999;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  width: 300px;
+  pointer-events: none;
+}
+
+.preview-popup-global img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* put this next to your preview CSS */
+.preview-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, .12);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: .9;
+  padding: 0
+}
+
+.preview-nav.left {
+  left: 6px
+}
+
+.preview-nav.right {
+  right: 6px
+}
+
+.preview-nav:disabled {
+  opacity: .35;
+  cursor: not-allowed
+}
+
+/* if your .preview-wrapper isn't positioned, add this: */
+.preview-wrapper {
+  position: relative
+}
