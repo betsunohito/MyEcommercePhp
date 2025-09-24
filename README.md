@@ -31,7 +31,6 @@ XAMPP Control Panel → **Apache** ve **MySQL** için **Start**<br>
 **3) 📂 Copy Project Into `htdocs`**<br>
 **3) 📂 Projeyi `htdocs` İçine Kopyalayın**<br>
 `C:\xampp\htdocs\`<br>
-`C:\xampp\htdocs\`<br>
 
 <br>
 
