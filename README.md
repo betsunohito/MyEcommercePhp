@@ -18,7 +18,9 @@ Proje dokümanı (Türkçe):<br>
 
 **1) 📥 Install XAMPP (PHP 8.x)**<br>
 **1) 📥 XAMPP’i (PHP 8.x) Kurun**<br>
+
 <br>
+
 **2) 🚀 Start Apache & MySQL**<br>
 **2) 🚀 Apache & MySQL’i Başlatın**<br>
 XAMPP Control Panel → **Start** for **Apache** and **MySQL**<br>
