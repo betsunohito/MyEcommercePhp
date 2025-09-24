@@ -41,10 +41,29 @@ phpMyAdmin → **Databases** → oluştur → **Import** `.sql`<br>
 
 <br>
 
-**5) 🔧 Edit `db.php` (Host / DB / User / Pass / Port)**<br>
-**5) 🔧 `db.php`’yi Düzenleyin (Host / DB / Kullanıcı / Şifre / Port)**<br>
-Yerel MySQL bilgilerinize göre ayarlayın (XAMPP varsayılan: user `root`, pass boş).<br>
-
+🔧 **Step 5 — Configure both `db.php` files**<br>
+🔧 **Adım 5 — Her iki `db.php` dosyasını da ayarlayın**<br>
+Paths / Yollar:<br>
+• `C:\xampp\htdocs\Mysqlecommerce\db.php`<br>
+• `C:\xampp\htdocs\Mysqlecommerce\tools\action\db.php`  ← (örnek ikinci konum)<br>
+<br>
+Set host, db name, user, pass, port for your local MySQL in **both** files.<br>
+Yerel MySQL için host, veritabanı adı, kullanıcı, şifre ve port’u **iki dosyada da** ayarlayın.<br>
+(Örn.)<br>
+```php
+<?php
+$host = '127.0.0.1';
+$db   = 'mysqlecommerce';
+$user = 'root';
+$pass = ''; // XAMPP'de genelde boş
+$dsn  = "mysql:host=$host;dbname=$db;charset=utf8mb4";
+$pdo  = new PDO($dsn, $user, $pass, [
+  PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+  PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+  PDO::ATTR_EMULATE_PREPARES => false,
+]);
+?>
+```
 <br>
 
 **6) 🌐 Run The App**<br>
