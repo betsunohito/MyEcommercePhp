@@ -68,5 +68,5 @@ $pdo  = new PDO($dsn, $user, $pass, [
 
 **6) 🌐 Run The App**<br>
 **6) 🌐 Uygulamayı Çalıştırın**<br>
-`http://localhost/YourProject/`<br>
-`http://localhost/YourProject/`<br>
+`http://localhost/MysqlPhpProject`
+`http://localhost/mysqlecommerce`<br>
