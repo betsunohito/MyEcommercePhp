@@ -6,7 +6,9 @@ This is my e-commerce website, built to showcase my experience and capabilities.
 Bu e-ticaret web sitesini, deneyim ve yetkinliklerimi sergilemek için geliştirdim.<br>
 <br>
 For a quick design overview, see the live demo below: <br>
-[![Demo: Limited](https://img.shields.io/badge/Demo-Limited-red)](https://modaway.42web.io/Mysqlecommerce/index.php)<br>
+<a href="https://modaway.42web.io/Mysqlecommerce/index.php">
+  <img src="https://img.shields.io/badge/Demo-Limited-red" alt="Demo: Limited">
+</a><br>
 > **⚠️ Note:** This demo doesn’t represent the final result — <mark>the free host disables MySQL stored procedures</mark>, so some features are limited.<br>
 <br>
 Hızlı bir tasarım özeti için aşağıdaki canlı demoya bakabilirsiniz: <br>
