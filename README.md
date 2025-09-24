@@ -23,7 +23,8 @@ Hızlı bir tasarım özeti için aşağıdaki canlı demoya bakabilirsiniz: <br
 
 **1) 📥 Install XAMPP (PHP 8.x)**<br>
 **1) 📥 XAMPP’i (PHP 8.x) Kurun**<br>
-
+Enable **GD** in `C:/xampp/php/php.ini` → change `;extension=gd` to `extension=gd` — this enables image resizing/thumbnails.<br>
+`C:/xampp/php/php.ini` içinde **GD**’yi etkinleştirin → `;extension=gd` değerini `extension=gd` olarak değiştirin — bu işlem yeniden boyutlandırma/küçük görselleri etkinleştirir.<br>
 <br>
 
 **2) 🚀 Start Apache & MySQL**<br>
