@@ -15,8 +15,9 @@ Hızlı bir tasarım özeti için aşağıdaki canlı demoya bakabilirsiniz: <br
 </a><br>
 <br>
 📄 Proje dokümanı (PDF — Türkçe):<br>
-[![PDF — Proje Dokümanı](https://img.shields.io/badge/Proje%20Dok%C3%BCman%C4%B1-PDF-red?logo=adobeacrobat)](https://github.com/user-attachments/files/22286144/myecommercedocument.pdf)<br>
-
+<a href="https://github.com/user-attachments/files/22286144/myecommercedocument.pdf">
+  <img src="https://img.shields.io/badge/Proje%20Dok%C3%BCman%C4%B1-PDF-red?logo=adobeacrobat" alt="PDF — Proje Dokümanı">
+</a><br>
 
 ## Local Setup (XAMPP) / Yerelde Çalıştırma (XAMPP)
 
