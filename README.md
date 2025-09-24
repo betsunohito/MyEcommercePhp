@@ -10,9 +10,8 @@ Hızlı bir tasarım özeti için aşağıdaki canlı demoya bakabilirsiniz. ![D
 > **⚠️ Note:** This demo doesn’t represent the final result — <mark>the free host disables MySQL stored procedures</mark>, so some features are limited.<br>
 > **⚠️ Not:** Bu demo nihai sonucu tam yansıtmaz — <mark>ücretsiz sağlayıcı MySQL saklı yordamlarını desteklemiyor</mark>, bu yüzden bazı özellikler kısıtlıdır.<br>
 <br>
-Project document (Turkish):<br>
-Proje dokümanı (Türkçe):<br>
-[myecommercedocument.pdf](https://github.com/user-attachments/files/22286144/myecommercedocument.pdf)
+📄 Project document (PDF, Turkish) / Proje dokümanı (PDF — Türkçe):<br>
+[![PDF — Project Document (TR)](https://img.shields.io/badge/Project%20Document%20(TR)-PDF-red?logo=adobeacrobat)](https://github.com/user-attachments/files/22286144/myecommercedocument.pdf)<br>
 
 ## Local Setup (XAMPP) / Yerelde Çalıştırma (XAMPP)
 
