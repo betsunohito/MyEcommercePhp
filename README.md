@@ -12,7 +12,9 @@ For a quick design overview, see the live demo below: <br>
 > **⚠️ Note:** This demo doesn’t represent the final result — <mark>the free host disables MySQL stored procedures</mark>, so some features are limited.<br>
 <br>
 Hızlı bir tasarım özeti için aşağıdaki canlı demoya bakabilirsiniz: <br>
-[![Demo: Sınırlı](https://img.shields.io/badge/Demo-S%C4%B1n%C4%B1rl%C4%B1-red)](https://modaway.42web.io/Mysqlecommerce/index.php)<br>
+<a href="https://modaway.42web.io/Mysqlecommerce/index.php">
+  <img src="https://img.shields.io/badge/Demo-Limited-red" alt="Demo: Sınırlı">
+</a><br>
 > **⚠️ Not:** Bu demo nihai sonucu tam yansıtmaz — <mark>ücretsiz sağlayıcı MySQL saklı yordamlarını desteklemiyor</mark>, bu yüzden bazı özellikler kısıtlıdır.<br>
 <br>
 <br>
